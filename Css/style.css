@@ -1,0 +1,414 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --font-heading: "Sen", Sans-Serif;
+    --prinmary-color: #ffb900;
+}
+
+html {
+    /* 1rem=16px  ( quy do thanh 1rem=10px)
+  10/16 *100=62.5%
+  giam font-size html xuong 62.5% 
+  thi 1rem se bang 10px
+  */
+
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem; /* ( tuong duong 16px) */
+    font-family: "poppins", Sans-Serif;
+    background: rgb(48 213 200);
+}
+
+/*=======COMMON CHUNG=======*/
+a {
+    text-decoration: none;
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px); /* thu nhu lai moi ben cach 24px */
+    margin-right: auto;
+    margin-left: auto;
+}
+.btn {
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 999px;
+    background: #171100;
+    min-width: 144px;
+    padding: 0px 16px;
+    line-height: 50px;
+}
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+button {
+    border: none;
+}
+.line-clamp{
+  display:-webkit-box ;
+  -webkit-line-clamp: var(--line-clamp,1);
+  -webkit-box-orient:vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2{
+  --line-clamp: 2;
+}
+.break-all{
+  word-break: break-all;
+}
+/*=======HEARDER=======*/
+.header {
+    background: #fffcf0;
+}
+
+.body-header nav {
+    display: flex;
+}
+.body-header {
+    display: flex;
+    padding-top: 36px;
+    align-items: center;
+}
+.main-content {
+    height: 86px;
+}
+.body-header ul {
+    display: flex;
+}
+.body-header nav {
+    margin-left: auto;
+}
+.body-header li > a {
+    position: relative;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-weight: 40rem;
+    color: #5f5b53;
+    padding: 8px 21px;
+}
+/* di chuot toi se in dam chu home */
+li.active a,
+nav a:hover {
+    color: #171100;
+    text-shadow: 1px 0 0 currentColor;
+}
+/* theem gach chan duoi chu Home */
+li.active a::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 12px;
+    height: 2px;
+    background-color: #171100;
+    border-radius: 1px;
+    bottom: 6px;
+    left: 21px;
+}
+.btn-sign-up {
+    margin-left: 49px;
+    margin-bottom: 8px;
+    width: 144px;
+}
+.btn-sign-up a {
+    color: #fff;
+}
+/* giua cho phan header luon tren dau */
+.header.fixel {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+/*≈≈=============MAIN chung=======|=|==|=*/
+.main {
+    background: #fffcf4;
+}
+.main > .main-body {
+    display: flex;
+    width: 1170px;
+    max-width: calc(100% - 48px); /* thu nhu lai moi ben cach 24px */
+    margin-right: auto;
+    margin-left: auto;
+
+    border: none;
+}
+/*=======main rieng====>*/
+.main-body {
+    padding: 56px 0 65px 0;
+}
+/*been trai */
+.main .body-media {
+    margin-right: auto;
+    width:;
+}
+.main .body-content {
+}
+.body-media .img-hero img {
+    padding:;
+}
+.body-media .img-hero {
+    position: relative;
+    width: 570px;
+    height: 685px;
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+.body-media .hero-summary {
+    background: #fff;
+    box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 0.05);
+    position: absolute;
+    bottom: 48px;
+    right: 0;
+    width: 270px;
+    padding: 24px;
+    border-radius: 12px;
+}
+.body-media .hero-summary .items {
+    display: flex;
+}
+.hero-summary .items .icon img {
+    width: 48px;
+    height: 48px;
+}
+.hero-summary .items .info {
+    margin-left: 16px;
+}
+.hero-summary .items .info .title {
+    color: #5f5b53;
+    font-family: Poppins;
+    font-size: 1.4rem;
+
+    line-height: 2.6rem;
+}
+.hero-summary .items .info .title2 {
+    color: #171100;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 3rem;
+}
+.hero-summary .items + .items {
+    margin-top: 22px;
+}
+/*been phai */
+.body-content {
+    padding-left: 130px;
+    padding-top: 64px;
+}
+.body-content .content1 h2 {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 6.8rem;
+}
+.body-content .content1 desic {
+    margin-top: 22px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+.body-content .content2 {
+    display: flex;
+    margin-top: 38px;
+    align-items: center;
+    line-height: 64px;
+}
+.content2 .btn-see-sources {
+    background: var(--prinmary-color);
+}
+.content2 .watch {
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.content2 .watch .icon {
+    margin-top: 11px;
+}
+
+.content2 .watch .text {
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+}
+
+.body-content p.desic2 {
+    margin-top: 48px;
+}
+.body-content .stats {
+    margin-top: 8px;
+}
+
+.body-content .stats strong {
+    margin-right: 15px;
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.23;
+}
+.body-content .stats strong:nth-child(2) {
+    margin-left: 15px;
+}
+/* =========noi dung trang====*/
+
+.body-page {
+    padding-top: 200px;
+    padding-bottom: 10px;
+    width: 1170px;
+    max-width: calc(100% - 48px); /* thu nhu lai moi ben cach 24px */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title-body {
+    display: flex;
+    justify-content: space-between;
+}
+.title-body .img-icon {
+    display: flex;
+    gap: 18px;
+}
+.title-body .img-icon button svg {
+    display: flex;
+}
+.title-body .img-icon button {
+}
+.title-body .img-icon .icon:hover {
+    background: var(--prinmary-color);
+    color: #fff;
+}
+.title-body .img-icon .icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    color: var(--prinmary-color);
+    border-radius: 50%;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--prinmary-color);
+}
+.title-body .title-body1 h2 {
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 48px;
+}
+.title-body .title-body1 p {
+    margin-top: 1.6rem;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 30px;
+}
+.title-body .icon-phai {
+    padding-right: 18px;
+}
+.title-body .img-icon .icon-phai img {
+    display: flex;
+    width: 40px;
+}
+.title-body .img-icon .icon-trai img {
+    display: flex;
+    width: 40px;
+}
+.title-content {
+    display: flex;
+    gap: 30px;
+}
+.title-content1 {
+    margin-top: 55px;
+    border-radius: 12px;
+    background: #fff;
+    width: 370px;
+    border: 1px solid #e2dfda;
+}
+.title-content1:hover {
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: #fff;
+    box-shadow: 0 18px 36px 0 rgb(0 0 0 / 0.05);
+}
+
+.title-content1 > img {
+    width: 370px;
+    margin-top:;
+}
+.title-content2 {
+    margin: 3px 22px 12px;
+    background: white;
+}
+
+.title-content2 .title-star {
+    display: flex;
+}
+.title-content2 .title-star h3 a{
+    color: #171100;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+}
+.title-content1 .title-star .img-star {
+    display: flex;
+    margin-left: auto;
+    width: 48px;
+    align-items: center;
+}
+.title-content1 .title-star .img-star span {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--prinmary-color);
+    margin-left: 6px;
+    margin-top: 5px;
+}
+.title-star .img-star img {
+    width: 18px;
+    height: 18px;
+}
+.title-content1 .title-star {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+}
+.title-content1 p {
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 26px;
+}
+.title-content2 .title-button {
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+}
+.title-content2 .btn-buy-now {
+    width: 118px;
+}
+.title-content2 .title-button .btn-buy-now {
+    margin-left: auto;
+    height: 50px;
+}
+.title-content2 .title-button .money {
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 30px;
+}
+.title-content2 .title-button .btn-buy-now:hover {
+    background: var(--prinmary-color);
+}
